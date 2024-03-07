@@ -68,11 +68,12 @@ export class AlertsWidgetComponent implements OnInit, OnDestroy{
   constructor(private alertsService: AlertsService ){  }
   
   ngOnInit(): void {
-    this.getAlertsSubscription = interval(2000).pipe(takeUntil(this.unsubscribe$)).subscribe(x => {
+    this.getAlertsSubscription = interval(15000).pipe(takeUntil(this.unsubscribe$)).subscribe(x => {
       console.log(`get next alert, number ${x}`);
       this.alertsService.getAlerts().subscribe({
         next: (response) => { 
-          this.alert = response; 
+          this.alert = response;
+          this.alerts = [...this.alerts, response]; 
         },
         error: error => {
           alert(error.massage);
