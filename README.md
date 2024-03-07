@@ -38,12 +38,12 @@ npm install
 3. Run
 * Fronend:
 ```
-cd blog-app/client
+cd alerts-dashboard/client
 ng serve
 ```
 * Backend:
 ```
-cd blog-app/api
+cd alerts-dashboard/api
 npm start
 ```
 
