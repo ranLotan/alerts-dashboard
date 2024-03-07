@@ -1,38 +1,18 @@
-<p>alerts-widget works!</p>
-<p>{{alert}}</p>
+<div class="table-container">
+    <app-alerts-table class="Alerts-table"
+        [title]="'Active Alerts'"
+        [tableData]="activeAlertsData"
+        [displayedColumns]="displayedColumns"
+        (sendAlert)="changeAlertStatus($event)">
+    </app-alerts-table>
+</div>
 
-<table mat-table [dataSource]="alerts" matSort class="mat-elevation-z8">
-    
-    <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by name"> Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.name }}</td>
-    </ng-container>
-    
-    <ng-container matColumnDef="description">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
-        <td mat-cell *matCellDef="let element"> {{element.description }}</td>
-    </ng-container>
-    
-    <ng-container matColumnDef="severity">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by alert severity"> Severity </th>
-        <td mat-cell *matCellDef="let element"> {{element.severity }}</td>
-    </ng-container>
-    
-    <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by date"> Date </th>
-        <td mat-cell *matCellDef="let element"> {{element.date }}</td>
-    </ng-container>
-    
-    <ng-container matColumnDef="source">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by source"> Source </th>
-        <td mat-cell *matCellDef="let element"> {{element.source }}</td>
-    </ng-container>
-    
-    <ng-container matColumnDef="alertId">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by alert ID"> Alert ID </th>
-        <td mat-cell *matCellDef="let element"> {{element.alertId }}</td>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-</table>
+<div class="table-container">
+    <app-alerts-table class="Alerts-table"
+        [title]="'Dissmised Alerts'"
+        [tableData]="dissmisedAlertsData"
+        [displayedColumns]="displayedColumns"
+        (sendAlert)="changeAlertStatus($event)"
+        >
+    </app-alerts-table>
+</div>

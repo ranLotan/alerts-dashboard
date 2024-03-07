@@ -1,4 +1,5 @@
 export interface IAlerts {
+    dismissed: boolean,
     name: string,
     description: string,
     severity: number,

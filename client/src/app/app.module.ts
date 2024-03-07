@@ -3,17 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AlertsWidgetComponent } from './alerts-widget/alerts-widget.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
+import { AlertsTableComponent } from './alerts-table/alerts-table.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlertsWidgetComponent,
-    NavBarComponent
+    AlertsTableComponent
   ],
   imports: [
     BrowserModule,
@@ -21,6 +22,7 @@ import { MatSortModule } from '@angular/material/sort';
     BrowserAnimationsModule,
     MatSortModule, 
     MatTableModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
