@@ -5,7 +5,6 @@ All alerts data is saved after each change. data is saved and retrived from loca
 
 ## Delivered Requirements:
 
-Frontend:
 * The application will pull an alert from the server every 15 sec.
 * The dashboard shows the alerts with a color code based on severity.
 * The dashboard will allow the user to sort the alerts by date/severity/source.
@@ -25,7 +24,7 @@ Frontend:
 ```
 git clone https://github.com/ranlotan/alerts-dashboard.git
 ```
-3. Install NPM
+2. Install NPM
 * Fronend:
 ```
 cd alerts-dashboard/client
@@ -36,7 +35,7 @@ npm install
 cd alerts-dashboard/server
 npm install
 ```
-2. Run
+3. Run
 * Fronend:
 ```
 cd blog-app/client
@@ -48,7 +47,7 @@ cd blog-app/api
 npm start
 ```
 
-## pictur from dashboard
+## picture from dashboard
 ![dashboard](https://github.com/ranLotan/alerts-dashboard/assets/152190030/e8d4152a-40af-455d-8de9-c35d7927e849)
 
 
